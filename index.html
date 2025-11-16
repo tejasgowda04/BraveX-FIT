@@ -3,1263 +3,690 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRAVEX FIT | Premium Gym & Dance Studio in Mandya, Karnataka</title>
-    <meta name="description" content="BRAVEX FIT in Mandya offers premium gym training and dance classes. Experience strength, rhythm, and discipline in our state-of-the-art facility.">
+    <title>BRAVE X FIT | Premium Gym & Dance Academy in Mandya</title>
+    <meta name="description" content="BRAVE X FIT - Mandya's premium Gym & Dance Academy. Train like a warrior with our state-of-the-art facilities and expert trainers.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="gym Mandya, dance academy Mandya, fitness center, workout, dance classes, BRAVE X FIT">
     
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="BRAVEX FIT | Premium Gym & Dance Studio">
-    <meta property="og:description" content="Experience premium fitness training and dance classes at BRAVEX FIT in Mandya, Karnataka.">
+    <meta property="og:title" content="BRAVE X FIT | Premium Gym & Dance Academy in Mandya">
+    <meta property="og:description" content="Train like a warrior at Mandya's premium Gym & Dance Academy. State-of-the-art facilities and expert trainers.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bravexfitness.com">
-    <meta property="og:image" content="https://bravexfitness.com/images/og-image.jpg">
+    <meta property="og:url" content="https://bravexfit.com">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "BRAVE X FIT",
+      "description": "Premium Gym & Dance Academy in Mandya",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Fitness Street",
+        "addressLocality": "Mandya",
+        "addressRegion": "Karnataka",
+        "postalCode": "571401",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-9876543210",
+      "openingHours": "Mo-Su 05:00-22:00",
+      "url": "https://bravexfit.com",
+      "priceRange": "₹₹"
+    }
+    </script>
     
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gold': '#FFB41F',
+                        'gold-glow': '#FFD369',
+                        'dark-steel': '#1F1F2C',
+                        'soft-gray': '#F4F4F6',
+                    },
+                    fontFamily: {
+                        'display': ['Poppins', 'sans-serif'],
+                        'ui': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'pulse-glow': 'pulseGlow 2s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 5px rgba(255, 180, 31, 0.5)' },
+                            '50%': { boxShadow: '0 0 20px rgba(255, 180, 31, 0.8)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     
     <style>
         :root {
-            --primary: #2a2a72;
-            --secondary: #ff9e00;
-            --accent: #ff6b6b;
-            --light: #f8f9fa;
-            --light-gray: #e9ecef;
-            --dark: #212529;
-            --text: #333333;
-            --text-light: #6c757d;
-            --gradient-primary: linear-gradient(135deg, #2a2a72 0%, #009ffd 100%);
-            --gradient-secondary: linear-gradient(135deg, #ff9e00 0%, #ff6b6b 100%);
-            --gradient-light: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
-            --border-radius: 16px;
-            --transition: all 0.3s ease;
+            --gold: #FFB41F;
+            --gold-glow: #FFD369;
+            --dark-steel: #1F1F2C;
+            --soft-gray: #F4F4F6;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        
+        /* Custom button styles with texture effect */
+        .btn-textured {
+            background: linear-gradient(145deg, #ffc145, #e69c1c);
+            box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.3),
+                        inset -2px -2px 4px rgba(0, 0, 0, 0.2),
+                        0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
         }
-
+        
+        .btn-textured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            mix-blend-mode: overlay;
+        }
+        
+        .btn-textured:hover {
+            transform: scale(0.98);
+            box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.3),
+                        inset -2px -2px 4px rgba(0, 0, 0, 0.2),
+                        0 2px 4px rgba(0, 0, 0, 0.1),
+                        0 0 15px rgba(255, 211, 105, 0.6);
+        }
+        
+        /* Glassmorphism effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Card hover effect */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px) perspective(1000px) rotateX(5deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 0 20px rgba(255, 180, 31, 0.2);
+        }
+        
+        /* Hero animation */
+        .hero-content {
+            animation: fadeIn 0.8s ease-out, slideUp 0.8s ease-out;
+        }
+        
+        /* Smooth scroll behavior */
         html {
             scroll-behavior: smooth;
         }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: var(--light);
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 16px;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .btn-primary {
-            background: var(--gradient-primary);
-            color: white;
-            box-shadow: var(--shadow);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .btn-secondary {
-            background: var(--gradient-secondary);
-            color: white;
-            box-shadow: var(--shadow);
-        }
-
-        .btn-secondary:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--gradient-secondary);
-            border-radius: 2px;
-        }
-
-        .section-title p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 20px auto 0;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-img {
-            height: 50px;
-            width: auto;
-        }
-
-        .logo-text h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0;
-            color: var(--primary);
-        }
-
-        .logo-text span {
-            color: var(--secondary);
-        }
-
-        .nav-menu {
-            display: flex;
-        }
-
-        .nav-menu li {
-            margin-left: 30px;
-        }
-
-        .nav-menu a {
-            font-weight: 500;
-            position: relative;
-            padding: 5px 0;
-        }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gradient-secondary);
-            transition: var(--transition);
-        }
-
-        .nav-menu a:hover::after {
-            width: 100%;
-        }
-
-        .mobile-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(rgba(42, 42, 114, 0.7), rgba(0, 159, 253, 0.5)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 700px;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            font-weight: 300;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 20px;
-        }
-
-        /* About Section */
-        .about {
-            background: var(--light);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-            color: var(--text-light);
-        }
-
-        .about-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .feature {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-
-        .feature-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .about-image {
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            position: relative;
-        }
-
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-secondary);
-            opacity: 0.1;
-            z-index: 1;
-        }
-
-        /* Programs Section */
-        .programs {
-            background: var(--light-gray);
-        }
-
-        .program-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .tab-btn {
-            padding: 12px 25px;
-            background: white;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-        }
-
-        .tab-btn.active {
-            background: var(--gradient-primary);
-            color: white;
-        }
-
-        .program-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .program-card {
-            background: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .program-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .program-img {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .program-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .program-card:hover .program-img img {
-            transform: scale(1.05);
-        }
-
-        .program-content {
-            padding: 25px;
-        }
-
-        .program-content h3 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .program-content p {
-            color: var(--text-light);
-            margin-bottom: 20px;
-        }
-
-        .program-features {
-            margin-bottom: 20px;
-        }
-
-        .program-features li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-
-        .program-features i {
-            color: var(--secondary);
-            margin-right: 10px;
-        }
-
-        /* Pricing Section */
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .pricing-card {
-            background: white;
-            border-radius: var(--border-radius);
-            padding: 40px 30px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .pricing-card.popular {
-            border: 2px solid var(--secondary);
-        }
-
-        .popular-badge {
-            position: absolute;
-            top: 20px;
-            right: -30px;
-            background: var(--gradient-secondary);
-            color: white;
-            padding: 5px 30px;
-            transform: rotate(45deg);
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .pricing-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: var(--gradient-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.8rem;
-            color: var(--primary);
-        }
-
-        .pricing-card h3 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .price span {
-            font-size: 1rem;
-            color: var(--text-light);
-            font-weight: 400;
-        }
-
-        .pricing-features {
-            margin-bottom: 30px;
-        }
-
-        .pricing-features li {
-            margin-bottom: 10px;
-            color: var(--text-light);
-        }
-
-        /* Testimonials */
-        .testimonials {
-            background: var(--light-gray);
-        }
-
-        .testimonial-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: white;
-            border-radius: var(--border-radius);
-            padding: 30px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            color: var(--text-light);
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-
-        .author-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-right: 15px;
-        }
-
-        .author-info h4 {
-            margin-bottom: 5px;
-            font-size: 1.1rem;
-        }
-
-        .author-info p {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        /* Gallery */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        .gallery-item {
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            height: 250px;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-overlay i {
-            color: white;
-            font-size: 2rem;
-        }
-
-        /* Contact */
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .contact-text h4 {
-            margin-bottom: 5px;
-            color: var(--primary);
-        }
-
-        .contact-form {
-            background: white;
-            padding: 40px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid var(--light-gray);
-            border-radius: 8px;
-            font-family: 'Poppins', sans-serif;
-            transition: var(--transition);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(42, 42, 114, 0.1);
-        }
-
-        .whatsapp-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: #25D366;
-            color: white;
-            margin-top: 20px;
-            width: 100%;
-        }
-
-        .whatsapp-btn:hover {
-            background: #128C7E;
-            transform: translateY(-3px);
-        }
-
-        .map {
-            height: 300px;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            margin-top: 40px;
-            box-shadow: var(--shadow);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: white;
-            padding: 70px 0 20px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-
-        .footer-col h3 {
-            font-size: 1.3rem;
-            margin-bottom: 25px;
-            position: relative;
-        }
-
-        .footer-col h3::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background: var(--secondary);
-        }
-
-        .footer-col p {
-            margin-bottom: 15px;
-            opacity: 0.8;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            opacity: 0.8;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            opacity: 1;
-            color: var(--secondary);
-            padding-left: 5px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
-
-        /* Floating CTA */
-        .floating-cta {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 999;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
+        
+        /* Loading skeleton */
+        .skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
             0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
+                background-position: 200% 0;
             }
             100% {
-                transform: translateY(0);
+                background-position: -200% 0;
             }
         }
-
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-
-            .about-image {
-                order: -1;
-            }
-
-            .hero h1 {
-                font-size: 2.8rem;
-            }
+        
+        /* Hero background image */
+        .hero-bg {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgba(255,180,31,0.1);stop-opacity:1" /><stop offset="100%" style="stop-color:rgba(31,31,44,0.1);stop-opacity:1" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad)"/><circle cx="200" cy="200" r="100" fill="rgba(255,180,31,0.05)"/><circle cx="1000" cy="600" r="150" fill="rgba(255,180,31,0.05)"/><circle cx="800" cy="200" r="80" fill="rgba(31,31,44,0.05)"/></svg>');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-
-        @media (max-width: 768px) {
-            .mobile-toggle {
-                display: block;
-            }
-
-            .nav-menu {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 80px);
-                background: white;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                padding-top: 50px;
-                transition: var(--transition);
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .nav-menu li {
-                margin: 0 0 30px 0;
-            }
-
-            .hero h1 {
-                font-size: 2.3rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .hero-btns {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .section {
-                padding: 70px 0;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
-
-            .about-features {
-                grid-template-columns: 1fr;
-            }
-
-            .logo-text h1 {
-                font-size: 1.5rem;
-            }
-
-            .logo-img {
-                height: 40px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .program-tabs {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .tab-btn {
-                width: 100%;
-                max-width: 250px;
-            }
-
-            .contact-form {
-                padding: 25px;
-            }
-
-            .floating-cta {
-                bottom: 20px;
-                right: 20px;
-            }
-
-            .logo {
-                gap: 10px;
-            }
-
-            .logo-text h1 {
-                font-size: 1.3rem;
-            }
-
-            .logo-img {
-                height: 35px;
-            }
+        
+        /* Logo placeholder styling */
+        .logo-placeholder {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #ffc145, #e69c1c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body>
+<body class="font-ui bg-soft-gray text-dark-steel">
     <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <img src="gym.png" alt="BRAVEX FIT Logo" class="logo-img">
-                <div class="logo-text">
-                    <h1>BRAVE<span>X</span> FIT</h1>
-                </div>
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <!-- Logo image - replace with actual logo.jpg -->
+               
+               
+                <img src="gym.png" alt="BRAVE X FIT Logo" class="w-12 h-12 rounded-full object-cover mr-3">
+                
+                <span class="font-display font-bold text-xl">BRAVE <span class="text-gold">X</span> FIT</span>
             </div>
-            <div class="mobile-toggle">
-                <i class="fas fa-bars"></i>
+            
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="font-medium hover:text-gold transition-colors">Home</a>
+                <a href="#about" class="font-medium hover:text-gold transition-colors">About</a>
+                <a href="#programs" class="font-medium hover:text-gold transition-colors">Programs</a>
+                <a href="#features" class="font-medium hover:text-gold transition-colors">Why Choose Us</a>
+                <a href="#gallery" class="font-medium hover:text-gold transition-colors">Gallery</a>
+                <a href="#schedule" class="font-medium hover:text-gold transition-colors">Schedule</a>
+                <a href="#contact" class="font-medium hover:text-gold transition-colors">Contact</a>
+            </nav>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-dark-steel hover:bg-soft-gray">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg py-4 px-4">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="font-medium hover:text-gold transition-colors py-2">Home</a>
+                <a href="#about" class="font-medium hover:text-gold transition-colors py-2">About</a>
+                <a href="#programs" class="font-medium hover:text-gold transition-colors py-2">Programs</a>
+                <a href="#features" class="font-medium hover:text-gold transition-colors py-2">Why Choose Us</a>
+                <a href="#gallery" class="font-medium hover:text-gold transition-colors py-2">Gallery</a>
+                <a href="#schedule" class="font-medium hover:text-gold transition-colors py-2">Schedule</a>
+                <a href="#contact" class="font-medium hover:text-gold transition-colors py-2">Contact</a>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Transform Your Body, Elevate Your Spirit</h1>
-                <p>Strength • Rhythm • Discipline</p>
-                <div class="hero-btns">
-                    <a href="#pricing" class="btn btn-primary">Join Now</a>
-                    <a href="#programs" class="btn btn-secondary">Explore Programs</a>
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden hero-bg">
+        <!-- Background overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-white/80 to-soft-gray/80 z-0"></div>
+        
+        <!-- Hero content -->
+        <div class="container mx-auto px-4 z-10 hero-content">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="font-display font-bold text-4xl md:text-6xl lg:text-7xl mb-6">
+                    Train Like A <span class="text-gold">Warrior</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-2 text-dark-steel/80">ಯೋಧನಂತೆ ತರಬೇತಿ ಪಡೆಯಿರಿ</p>
+                <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-dark-steel/70">
+                    Mandya's premium Gym & Dance Academy with state-of-the-art facilities and expert trainers
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                    <a href="https://wa.me/9535254331?text=Hi%2C%20I%20would%20like%20to%20join%20BRAVE%20X%20FIT%20Gym%20in%20Mandya.%20Please%20share%20membership%20details." target="_blank" class="btn-textured text-white font-medium py-4 px-8 rounded-full text-lg transition-all duration-300 text-center">
+                        Join Gym
+                    </a>
+                    <a href="https://wa.me/9535254331?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%20trial%20at%20BRAVE%20X%20FIT%20in%20Mandya.%20Please%20share%20available%20slots." target="_blank" class="bg-white text-dark-steel font-medium py-4 px-8 rounded-full border border-gold/30 text-lg hover:bg-soft-gray transition-all duration-300 shadow-sm text-center">
+                        Book Trial
+                    </a>
+                </div>
+                
+                <!-- Trust bar -->
+                <div class="inline-flex items-center bg-white/80 backdrop-blur-sm rounded-full py-3 px-6 shadow-sm border border-gold/20">
+                    <span class="text-gold font-medium mr-2">✨</span>
+                    <span class="text-sm font-medium">Pre-launch offer: Special discounts for early members!</span>
                 </div>
             </div>
         </div>
+        
+        <!-- Decorative elements -->
+        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent z-10"></div>
     </section>
 
     <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About BRAVEX FIT</h2>
-                <p>Where fitness meets artistry in the heart of Mandya</p>
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Our Story</h2>
+                <p class="text-lg text-dark-steel/80 max-w-2xl mx-auto">
+                    BRAVE X FIT was born from a passion for fitness and dance, combining world-class facilities with expert guidance to help you achieve your fitness goals in a motivating environment.
+                </p>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Premium Fitness & Dance Experience</h2>
-                    <p>BRAVEX FIT is Mandya's premier destination for fitness enthusiasts and dance lovers. Our state-of-the-art facility combines cutting-edge gym equipment with professionally designed dance studios.</p>
-                    <p>We believe in a holistic approach to wellness, blending physical strength with artistic expression to help our members achieve their fitness goals while having fun.</p>
-                    <div class="about-features">
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-dumbbell"></i>
-                            </div>
-                            <div>
-                                <h4>Modern Equipment</h4>
-                                <p>Latest fitness machines & tools</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-music"></i>
-                            </div>
-                            <div>
-                                <h4>Expert Instructors</h4>
-                                <p>Certified trainers & choreographers</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div>
-                                <h4>Community Focus</h4>
-                                <p>Supportive & motivating environment</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <div>
-                                <h4>Premium Facility</h4>
-                                <p>Clean, spacious & well-maintained</p>
-                            </div>
-                        </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Feature 1 -->
+                <div class="text-center p-6 rounded-2xl glass-card card-hover">
+                    <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                            <path d="M6 4v16"></path>
+                            <path d="M18 4v16"></path>
+                            <path d="M2 12h20"></path>
+                            <path d="M8 12h8"></path>
+                        </svg>
                     </div>
+                    <h3 class="font-display font-semibold text-xl mb-3">Premium Gym</h3>
+                    <p class="text-dark-steel/70">
+                        State-of-the-art equipment with personalized training programs for all fitness levels.
+                    </p>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="BRAVEX FIT Gym Interior">
+                
+                <!-- Feature 2 -->
+                <div class="text-center p-6 rounded-2xl glass-card card-hover">
+                    <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                            <path d="M9 19V6l12-3v13"></path>
+                            <path d="m9 19 12 3"></path>
+                            <path d="M9 19c0 .6-.4 1-1 1s-1-.4-1-1 .4-1 1-1 1 .4 1 1Z"></path>
+                            <path d="m20 16-.9-.3"></path>
+                            <path d="m17 15-.9-.3"></path>
+                            <path d="m14 14-.9-.3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-semibold text-xl mb-3">Dance Academy</h3>
+                    <p class="text-dark-steel/70">
+                        Multiple dance forms taught by professional instructors in a creative and energetic environment.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="text-center p-6 rounded-2xl glass-card card-hover">
+                    <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                            <path d="m12 14 4-4"></path>
+                            <path d="M3.34 19a10 10 0 1 1 17.32 0"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-semibold text-xl mb-3">Hygiene Focus</h3>
+                    <p class="text-dark-steel/70">
+                        Clean, sanitized facilities with strict hygiene protocols for your safety and comfort.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Programs Section -->
-    <section class="section programs" id="programs">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Programs</h2>
-                <p>Comprehensive fitness and dance programs tailored to your goals</p>
+    <section id="programs" class="py-16 md:py-24 bg-soft-gray">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Our Programs</h2>
+                <p class="text-lg text-dark-steel/80 max-w-2xl mx-auto">
+                    We offer specialized programs for both gym enthusiasts and dance lovers, tailored to help you achieve your fitness goals.
+                </p>
             </div>
-            <div class="program-tabs">
-                <div class="tab-btn active" data-tab="gym">Gym Programs</div>
-                <div class="tab-btn" data-tab="dance">Dance Sessions</div>
-            </div>
-            <div class="program-cards">
-                <!-- Gym Programs -->
-                <div class="program-card" data-category="gym">
-                    <div class="program-img">
-                        <img src="https://images.unsplash.com/photo-1534367507877-0edd93bd013b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Weight Training">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Program Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-br from-gold to-gold-glow flex items-center justify-center">
+                        <span class="text-white font-display font-bold text-xl">Strength Training</span>
                     </div>
-                    <div class="program-content">
-                        <h3>Weight Training</h3>
-                        <p>Build strength and muscle with our comprehensive weight training program.</p>
-                        <ul class="program-features">
-                            <li><i class="fas fa-check"></i> Personalized workout plans</li>
-                            <li><i class="fas fa-check"></i> Professional guidance</li>
-                            <li><i class="fas fa-check"></i> Progressive overload techniques</li>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-soft-gray text-dark-steel text-xs font-medium py-1 px-3 rounded-full">Gym</span>
+                            <span class="bg-soft-gray text-dark-steel text-xs font-medium py-1 px-3 rounded-full">Beginner-Friendly</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold mr-2 mt-0.5 flex-shrink-0">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span class="text-dark-steel/80">Personalized workout plans</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold mr-2 mt-0.5 flex-shrink-0">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span class="text-dark-steel/80">Expert trainer guidance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold mr-2 mt-0.5 flex-shrink-0">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span class="text-dark-steel/80">Progress tracking</span>
+                            </li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Enroll Now</a>
+                        <a href="https://wa.me/9535254331?text=Hi%2C%20I%20am%20interested%20in%20Strength%20Training%20program%20at%20BRAVE%20X%20FIT.%20Please%20share%20details." target="_blank" class="w-full btn-textured text-white font-medium py-3 rounded-lg transition-all duration-300 block text-center">
+                            Join Batch
+                        </a>
                     </div>
                 </div>
-                <div class="program-card" data-category="gym">
-                    <div class="program-img">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cardio Training">
+                
+                <!-- Program Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-br from-dark-steel to-black flex items-center justify-center">
+                        <span class="text-white font-display font-bold text-xl">Bollywood Dance</span>
                     </div>
-                    <div class="program-content">
-                        <h3>Cardio Training</h3>
-                        <p>Improve your cardiovascular health with our varied cardio workouts.</p>
-                        <ul class="program-features">
-                            <li><i class="fas fa-check"></i> Treadmill, cycling & elliptical</li>
-                            <li><i class="fas fa-check"></i> HIIT sessions</li>
-                            <li><i class="fas fa-check"></i> Heart rate monitoring</li>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-soft-gray text-dark-steel text-xs font-medium py-1 px-3 rounded-full">Dance</span>
+                            <span class="bg-soft-gray text-dark-steel text-xs font-medium py-1 px-3 rounded-full">All Levels</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold mr-2 mt-0.5 flex-shrink-0">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span class="text-dark-steel/80">Learn popular choreography</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold mr-2 mt-0.5 flex-shrink-0">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span class="text-dark-steel/80">Group sessions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold mr-2 mt-0.5 flex-shrink-0">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span class="text-dark-steel/80">Performance opportunities</span>
+                            </li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Enroll Now</a>
+                        <a href="https://wa.me/9535254331?text=Hi%2C%20I%20am%20interested%20in%20Bollywood%20Dance%20classes%20at%20BRAVE%20X%20FIT.%20Please%20share%20details." target="_blank" class="w-full btn-textured text-white font-medium py-3 rounded-lg transition-all duration-300 block text-center">
+                            Join Batch
+                        </a>
                     </div>
                 </div>
-                <div class="program-card" data-category="gym">
-                    <div class="program-img">
-                        <img src="https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Personal Training">
+                
+                <!-- Program Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="h-48 bg-gradient-to-br from-gold to-gold-glow flex items-center justify-center">
+                        <span class="text-white font-display font-bold text-xl">Cardio & Fitness</span>
                     </div>
-                    <div class="program-content">
-                        <h3>Personal Training</h3>
-                        <p>One-on-one sessions with certified trainers for maximum results.</p>
-                        <ul class="program-features">
-                            <li><i class="fas fa-check"></i> Customized fitness plans</li>
-                            <li><i class="fas fa-check"></i> Nutritional guidance</li>
-                            <li><i class="fas fa-check"></i> Progress tracking</li>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-soft-gray text-dark-steel text-xs font-medium py-1 px-3 rounded-full">Gym</span>
+                            <span class="bg-soft-gray text-dark-steel text-xs font-medium py-1 px-3 rounded-full">Weight Loss</span>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold mr-2 mt-0.5 flex-shrink-0">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span class="text-dark-steel/80">HIIT workouts</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold mr-2 mt-0.5 flex-shrink-0">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span class="text-dark-steel/80">Fat burning exercises</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold mr-2 mt-0.5 flex-shrink-0">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span class="text-dark-steel/80">Nutrition guidance</span>
+                            </li>
                         </ul>
-                        <a href="#contact" class="btn btn-primary">Enroll Now</a>
+                        <a href="https://wa.me/9535254331?text=Hi%2C%20I%20am%20interested%20in%20Cardio%20%26%20Fitness%20program%20at%20BRAVE%20X%20FIT.%20Please%20share%20details." target="_blank" class="w-full btn-textured text-white font-medium py-3 rounded-lg transition-all duration-300 block text-center">
+                            Join Batch
+                        </a>
                     </div>
-                </div>
-                <!-- Dance Programs -->
-                <div class="program-card" data-category="dance">
-                    <div class="program-img">
-                        <img src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Zumba">
-                    </div>
-                    <div class="program-content">
-                        <h3>Zumba</h3>
-                        <p>High-energy dance fitness party that combines Latin rhythms with easy-to-follow moves.</p>
-                        <ul class="program-features">
-                            <li><i class="fas fa-check"></i> Fun, energetic workouts</li>
-                            <li><i class="fas fa-check"></i> Latin-inspired music</li>
-                            <li><i class="fas fa-check"></i> Full-body conditioning</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-primary">Enroll Now</a>
-                    </div>
-                </div>
-                <div class="program-card" data-category="dance">
-                    <div class="program-img">
-                        <img src="https://images.unsplash.com/photo-1594385775355-28aa5f4af1ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Hip-hop">
-                    </div>
-                    <div class="program-content">
-                        <h3>Hip-hop</h3>
-                        <p>Learn urban dance styles with our expert instructors in a fun, energetic environment.</p>
-                        <ul class="program-features">
-                            <li><i class="fas fa-check"></i> Street-style choreography</li>
-                            <li><i class="fas fa-check"></i> Current music trends</li>
-                            <li><i class="fas fa-check"></i> Freestyle development</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-primary">Enroll Now</a>
-                    </div>
-                </div>
-                <div class="program-card" data-category="dance">
-                    <div class="program-img">
-                        <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Bollywood Dance">
-                    </div>
-                    <div class="program-content">
-                        <h3>Bollywood Dance</h3>
-                        <p>Express yourself through vibrant Bollywood dance moves set to popular Indian music.</p>
-                        <ul class="program-features">
-                            <li><i class="fas fa-check"></i> Expressive choreography</li>
-                            <li><i class="fas fa-check"></i> Cultural immersion</li>
-                            <li><i class="fas fa-check"></i> High-energy routines</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-primary">Enroll Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="section pricing" id="pricing">
-        <div class="container">
-            <div class="section-title">
-                <h2>Pricing Plans</h2>
-                <p>Flexible membership options to suit your fitness journey</p>
-            </div>
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <div class="pricing-icon">
-                        <i class="fas fa-dumbbell"></i>
-                    </div>
-                    <h3>Gym Only</h3>
-                    <div class="price">₹3,499<span>/month</span></div>
-                    <ul class="pricing-features">
-                        <li>Full gym access</li>
-                        <li>Basic equipment orientation</li>
-                        <li>Locker room facilities</li>
-                        <li>Free fitness assessment</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
-                </div>
-                <div class="pricing-card popular">
-                    <div class="popular-badge">Most Popular</div>
-                    <div class="pricing-icon">
-                        <i class="fas fa-fire"></i>
-                    </div>
-                    <h3>Dance Only</h3>
-                    <div class="price">₹2,799<span>/month</span></div>
-                    <ul class="pricing-features">
-                        <li>Unlimited dance classes</li>
-                        <li>Choice of dance styles</li>
-                        <li>Group sessions</li>
-                        <li>Performance opportunities</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-secondary">Get Started</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="section testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Success Stories</h2>
-                <p>Hear from our members who transformed their lives at BRAVEX FIT</p>
+    <!-- Features / Why Choose Us Section -->
+    <section id="features" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Why Choose BRAVE X FIT</h2>
+                <p class="text-lg text-dark-steel/80 max-w-2xl mx-auto">
+                    We stand out with our premium facilities, expert trainers, and commitment to your fitness journey.
+                </p>
             </div>
-            <div class="testimonial-cards">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "BRAVEX FIT completely changed my approach to fitness. The combination of gym workouts and dance classes keeps me motivated and excited to exercise!"
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- USP 1 -->
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                            <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+                            <path d="M8.5 8.5v.01"></path>
+                            <path d="M16 15.5v.01"></path>
+                            <path d="M12 12v.01"></path>
+                            <path d="M11 17v.01"></path>
+                            <path d="M7 14v.01"></path>
+                        </svg>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Priya S.">
-                        </div>
-                        <div class="author-info">
-                            <h4>Priya S.</h4>
-                            <p>Member since 2022</p>
-                        </div>
-                    </div>
+                    <h3 class="font-display font-semibold text-xl mb-3">Expert Trainers</h3>
+                    <p class="text-dark-steel/70">
+                        Certified professionals with years of experience in fitness and dance instruction.
+                    </p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "The trainers at BRAVEX FIT are exceptional. They push you to achieve your best while ensuring proper form and technique. I've never felt stronger!"
+                
+                <!-- USP 2 -->
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Rahul K.">
-                        </div>
-                        <div class="author-info">
-                            <h4>Rahul K.</h4>
-                            <p>Member since 2021</p>
-                        </div>
-                    </div>
+                    <h3 class="font-display font-semibold text-xl mb-3">Modern Equipment</h3>
+                    <p class="text-dark-steel/70">
+                        State-of-the-art fitness machines and spacious dance studios with premium flooring.
+                    </p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "As a dance enthusiast, I love the variety of classes offered. The Bollywood sessions are my favorite! The instructors make every class enjoyable and challenging."
+                
+                <!-- USP 3 -->
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ananya R.">
-                        </div>
-                        <div class="author-info">
-                            <h4>Ananya R.</h4>
-                            <p>Member since 2023</p>
-                        </div>
+                    <h3 class="font-display font-semibold text-xl mb-3">Community</h3>
+                    <p class="text-dark-steel/70">
+                        Join a supportive community of fitness enthusiasts and dancers who motivate each other.
+                    </p>
+                </div>
+                
+                <!-- USP 4 -->
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
                     </div>
+                    <h3 class="font-display font-semibold text-xl mb-3">Flexible Timing</h3>
+                    <p class="text-dark-steel/70">
+                        Early morning to late evening batches to fit your busy schedule.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section class="section gallery" id="gallery">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Gallery</h2>
-                <p>Take a visual tour of our state-of-the-art facility</p>
+<section id="gallery" class="py-16 md:py-24 bg-soft-gray">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Our Gallery</h2>
+            <p class="text-lg text-dark-steel/80 max-w-2xl mx-auto">
+                Take a look at our state-of-the-art facilities, energetic classes, and vibrant community.
+            </p>
+        </div>
+        
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+
+            <!-- Modern Gym -->
+            <div class="relative group overflow-hidden rounded-2xl bg-white shadow-md">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                     alt="Modern Gym Equipment"
+                     class="aspect-square w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <p class="text-white font-medium">Modern Gym Equipment</p>
+                </div>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Gym Area">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
+
+            <!-- Dance Studio -->
+            <div class="relative group overflow-hidden rounded-2xl bg-white shadow-md">
+                <img src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                     alt="Dance Studio"
+                     class="aspect-square w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <p class="text-white font-medium">Dance Studio</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Dance Studio">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
+            </div>
+
+            <!-- Group Fitness -->
+            <div class="relative group overflow-hidden rounded-2xl bg-white shadow-md">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2120&q=80"
+                     alt="Group Fitness Class"
+                     class="aspect-square w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <p class="text-white font-medium">Group Fitness Class</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cardio Zone">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
+            </div>
+
+            <!-- Personal Training -->
+            <div class="relative group overflow-hidden rounded-2xl bg-white shadow-md">
+                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                     alt="Personal Training"
+                     class="aspect-square w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <p class="text-white font-medium">Personal Training</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Zumba Class">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
+            </div>
+
+            <!-- Zumba Dance -->
+            <div class="relative group overflow-hidden rounded-2xl bg-white shadow-md">
+                <img src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                     alt="Zumba Dance Session"
+                     class="aspect-square w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <p class="text-white font-medium">Zumba Dance Session</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1594385775355-28aa5f4af1ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Hip-hop Session">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
+            </div>
+
+            <!-- Yoga Area -->
+            <div class="relative group overflow-hidden rounded-2xl bg-white shadow-md">
+                <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                     alt="Yoga & Stretching Area"
+                     class="aspect-square w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <p class="text-white font-medium">Yoga & Stretching Area</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Bollywood Dance">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
+            </div>
+
+        </div>
+        
+        <div class="text-center mt-12">
+            <a href="gallery.html"
+               target="_blank" 
+               class="btn-textured text-white font-medium py-3 px-8 rounded-full transition-all duration-300 inline-block">
+                View Full Gallery
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Class Schedule</h2>
+                <p class="text-lg text-dark-steel/80 max-w-2xl mx-auto">
+                    Find the perfect time slot for your fitness journey with our flexible batch timings.
+                </p>
+            </div>
+            
+            <!-- Schedule Tabs -->
+            <div class="max-w-4xl mx-auto bg-soft-gray rounded-2xl p-6">
+                <!-- Tab Headers -->
+                <div class="flex overflow-x-auto mb-8 pb-2">
+                    <button class="schedule-tab flex-shrink-0 bg-white text-dark-steel font-medium py-3 px-6 rounded-full mr-3 transition-all duration-300 active-tab">
+                        Morning
+                    </button>
+                    <button class="schedule-tab flex-shrink-0 bg-white/50 text-dark-steel/70 font-medium py-3 px-6 rounded-full mr-3 transition-all duration-300">
+                        Afternoon
+                    </button>
+                    <button class="schedule-tab flex-shrink-0 bg-white/50 text-dark-steel/70 font-medium py-3 px-6 rounded-full transition-all duration-300">
+                        Evening
+                    </button>
+                </div>
+                
+                <!-- Tab Content -->
+                <div class="schedule-content">
+                    <!-- Morning Schedule -->
+                    <div class="tab-panel active">
+                        <div class="space-y-4">
+                            <!-- Schedule Item -->
+                            <div class="bg-white rounded-xl p-4 flex justify-between items-center">
+                                <div>
+                                    <h4 class="font-display font-semibold text-lg">Gym - Strength Training</h4>
+                                    <p class="text-dark-steel/70">5:30 AM - 7:00 AM</p>
+                                </div>
+                                <a href="https://wa.me/9535254331?text=Hi%2C%20I%20would%20like%20to%20join%20the%20Morning%20Strength%20Training%20batch%20(5%3A30%20AM%20-%207%3A00%20AM)%20at%20BRAVE%20X%20FIT." target="_blank" class="btn-textured text-white font-medium py-2 px-6 rounded-lg text-sm transition-all duration-300">
+                                    Join
+                                </a>
+                            </div>
+                            
+                            <!-- Schedule Item -->
+                            <div class="bg-white rounded-xl p-4 flex justify-between items-center">
+                                <div>
+                                    <h4 class="font-display font-semibold text-lg">Yoga & Stretching</h4>
+                                    <p class="text-dark-steel/70">7:00 AM - 8:00 AM</p>
+                                </div>
+                                <a href="https://wa.me/9535254331?text=Hi%2C%20I%20would%20like%20to%20join%20the%20Morning%20Yoga%20%26%20Stretching%20batch%20(7%3A00%20AM%20-%208%3A00%20AM)%20at%20BRAVE%20X%20FIT." target="_blank" class="btn-textured text-white font-medium py-2 px-6 rounded-lg text-sm transition-all duration-300">
+                                    Join
+                                </a>
+                            </div>
+                            
+                            <!-- Schedule Item -->
+                            <div class="bg-white rounded-xl p-4 flex justify-between items-center">
+                                <div>
+                                    <h4 class="font-display font-semibold text-lg">Cardio Fitness</h4>
+                                    <p class="text-dark-steel/70">8:00 AM - 9:30 AM</p>
+                                </div>
+                                <a href="https://wa.me/9535254331?text=Hi%2C%20I%20would%20like%20to%20join%20the%20Morning%20Cardio%20Fitness%20batch%20(8%3A00%20AM%20-%209%3A30%20AM)%20at%20BRAVE%20X%20FIT." target="_blank" class="btn-textured text-white font-medium py-2 px-6 rounded-lg text-sm transition-all duration-300">
+                                    Join
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1267,175 +694,300 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Visit us today and start your fitness journey</p>
+    <section id="contact" class="py-16 md:py-24 bg-soft-gray">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Get In Touch</h2>
+                <p class="text-lg text-dark-steel/80 max-w-2xl mx-auto">
+                    Ready to start your fitness journey? Contact us today for a free trial or membership inquiry.
+                </p>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+            
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="font-display font-semibold text-2xl mb-6">Send us a Message</h3>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-dark-steel font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-300">
                         </div>
-                        <div class="contact-text">
-                            <h4>Our Location</h4>
-                            <p>Reliance Digital Building, Old M C Road Mandya, Karnataka 571401</p>
+                        
+                        <div>
+                            <label for="phone" class="block text-dark-steel font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-300">
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
+                        
+                        <div>
+                            <label for="service" class="block text-dark-steel font-medium mb-2">Service Interested In</label>
+                            <select id="service" name="service" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-300">
+                                <option value="">Select a service</option>
+                                <option value="gym">Gym Membership</option>
+                                <option value="dance">Dance Classes</option>
+                                <option value="personal-training">Personal Training</option>
+                                <option value="both">Both Gym & Dance</option>
+                            </select>
                         </div>
-                        <div class="contact-text">
-                            <h4>Working Hours</h4>
-                            <p>Monday - Saturday: 5:00 AM - 10:00 PM</p>
-                            <p>Sunday: 6:00 AM - 9:00 PM</p>
+                        
+                        <div>
+                            <label for="time" class="block text-dark-steel font-medium mb-2">Preferred Time</label>
+                            <select id="time" name="time" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-300">
+                                <option value="">Select preferred time</option>
+                                <option value="morning">Morning (5:30 AM - 9:30 AM)</option>
+                                <option value="afternoon">Afternoon (4:00 PM - 6:00 PM)</option>
+                                <option value="evening">Evening (6:00 PM - 9:00 PM)</option>
+                            </select>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Contact Info</h4>
-                            <p>Phone: +91 89700 99027</p>
-                            <p>Email: info@bravexfitness.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-concierge-bell"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Facilities</h4>
-                            <p>• State-of-the-art gym equipment</p>
-                            <p>• Spacious dance studios</p>
-                            <p>• Locker rooms & showers</p>
-                            <p>• Free parking</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Send us a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" class="form-control" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                        <a href="https://wa.me/918970099027?text=Hi%20BRAVEX%20FIT,%20I'm%20interested%20in%20joining%20your%20gym/dance%20classes" class="btn whatsapp-btn">
-                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                        </a>
+                        
+                        <button type="submit" class="w-full btn-textured text-white font-medium py-4 rounded-lg transition-all duration-300">
+                            Send Message
+                        </button>
                     </form>
                 </div>
-            </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.040641801044!2d76.8958600745971!3d12.823832987513866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5350db5a635d7%3A0xcb29eeda140a5f1e!2sMandya%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1689240000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                <!-- Contact Info & Map -->
+                <div class="space-y-8">
+                    <!-- Contact Details -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="font-display font-semibold text-2xl mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-dark-steel">Address</h4>
+                                    <p class="text-dark-steel/70">123 Fitness Street, Mandya, Karnataka 571401</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-dark-steel">Phone</h4>
+                                    <p class="text-dark-steel/70">+91-9876543210</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-dark-steel">Email</h4>
+                                    <p class="text-dark-steel/70">info@bravexfit.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-dark-steel">Business Hours</h4>
+                                    <p class="text-dark-steel/70">Monday - Sunday: 5:00 AM - 10:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- WhatsApp CTA -->
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <a href="https://wa.me/9535254331?text=Hi%2C%20I'm%20interested%20in%20joining%20BRAVE%20X%20FIT%20in%20Mandya.%20Can%20you%20please%20share%20more%20details%3F" target="_blank" class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-4 rounded-lg flex items-center justify-center transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                </svg>
+                                Message us on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Map Placeholder -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="font-display font-semibold text-2xl mb-6">Our Location</h3>
+                        <div class="bg-soft-gray rounded-xl h-64 flex items-center justify-center">
+                            <p class="text-dark-steel/70">Google Maps Embed - Mandya, Karnataka</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>BRAVEX FIT</h3>
-                    <p>Mandya's premier destination for fitness and dance. Transform your body, elevate your spirit with our state-of-the-art facilities and expert guidance.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+    <footer class="bg-dark-steel text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="logo-placeholder mr-3">
+                            BX
+                        </div>
+                        <!-- Uncomment below and comment above when you have the logo.jpg file -->
+                        <!--
+                        <img src="assets/images/logo.jpg" alt="BRAVE X FIT Logo" class="w-12 h-12 rounded-full object-cover mr-3">
+                        -->
+                        <span class="font-display font-bold text-xl">BRAVE <span class="text-gold">X</span> FIT</span>
+                    </div>
+                    <p class="text-white/70 mb-4">
+                        Mandya's premium Gym & Dance Academy helping you train like a warrior.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white/70 hover:text-gold transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white/70 hover:text-gold transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white/70 hover:text-gold transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#programs">Programs</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-display font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-white/70 hover:text-gold transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-white/70 hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="#programs" class="text-white/70 hover:text-gold transition-colors">Programs</a></li>
+                        <li><a href="#gallery" class="text-white/70 hover:text-gold transition-colors">Gallery</a></li>
+                        <li><a href="#contact" class="text-white/70 hover:text-gold transition-colors">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Programs</h3>
-                    <ul class="footer-links">
-                        <li><a href="#programs">Weight Training</a></li>
-                        <li><a href="#programs">Cardio Training</a></li>
-                        <li><a href="#programs">Personal Training</a></li>
-                        <li><a href="#programs">Zumba</a></li>
-                        <li><a href="#programs">Hip-hop</a></li>
-                        <li><a href="#programs">Bollywood Dance</a></li>
+                
+                <!-- Programs -->
+                <div>
+                    <h3 class="font-display font-semibold text-lg mb-4">Programs</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/70 hover:text-gold transition-colors">Strength Training</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-gold transition-colors">Cardio & Fitness</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-gold transition-colors">Bollywood Dance</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-gold transition-colors">Yoga & Stretching</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-gold transition-colors">Personal Training</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> #123, Fitness Street, Mandya, Karnataka</p>
-                    <p><i class="fas fa-phone-alt"></i> +91 89700 99027</p>
-                    <p><i class="fas fa-envelope"></i> info@bravexfitness.com</p>
-                    <p><i class="fas fa-clock"></i> Mon-Sat: 5AM-10PM, Sun: 6AM-9PM</p>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-display font-semibold text-lg mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-white/70">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 mt-0.5 flex-shrink-0">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Reliance Digital Building, Old M.C Road  Mandya, Karnataka 571401</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 mt-0.5 flex-shrink-0">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>+91-9535254331</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 mt-0.5 flex-shrink-0">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                            <span>info@bravexfit.com</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 BRAVEX FIT. All Rights Reserved.</p>
+            
+            <div class="border-t border-white/20 mt-8 pt-8 text-center text-white/70">
+                <p>&copy; 2023 BRAVE X FIT. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating CTA -->
-    <div class="floating-cta">
-        <a href="#pricing" class="btn btn-secondary">Join Now</a>
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-dark-steel text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-16 transition-transform duration-300 z-50 hidden">
+        <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span id="toast-message">Message sent successfully!</span>
+        </div>
     </div>
 
     <script>
-        // Mobile Navigation Toggle
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileToggle.innerHTML = navMenu.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
         });
 
-        // Program Tabs
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const programCards = document.querySelectorAll('.program-card');
-
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                tabBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
-                btn.classList.add('active');
-                
-                const category = btn.getAttribute('data-tab');
-                
-                programCards.forEach(card => {
-                    if (category === 'all' || card.getAttribute('data-category') === category) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
+        // Schedule tabs
+        const scheduleTabs = document.querySelectorAll('.schedule-tab');
+        
+        scheduleTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                scheduleTabs.forEach(t => {
+                    t.classList.remove('active-tab');
+                    t.classList.add('bg-white/50', 'text-dark-steel/70');
+                    t.classList.remove('bg-white', 'text-dark-steel');
                 });
+                
+                // Add active class to clicked tab
+                this.classList.add('active-tab');
+                this.classList.remove('bg-white/50', 'text-dark-steel/70');
+                this.classList.add('bg-white', 'text-dark-steel');
             });
+        });
+
+        // Form submission with toast
+        const contactForm = document.getElementById('contact-form');
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toast-message');
+        
+        function showToast(message) {
+            toastMessage.textContent = message;
+            toast.classList.remove('hidden');
+            toast.classList.remove('translate-y-16');
+            toast.classList.add('translate-y-0');
+            
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0');
+                toast.classList.add('translate-y-16');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 300);
+            }, 3000);
+        }
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real implementation, you would send the form data to a server
+            // For demo purposes, we'll just show a success message
+            showToast('Message sent successfully! We will contact you soon.');
+            contactForm.reset();
         });
 
         // Smooth scrolling for anchor links
@@ -1454,34 +1006,29 @@
                     });
                     
                     // Close mobile menu if open
-                    if (navMenu.classList.contains('active')) {
-                        navMenu.classList.remove('active');
-                        mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                    }
+                    document.getElementById('mobile-menu').classList.add('hidden');
                 }
             });
         });
 
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.05)';
-            }
-        });
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
         });
     </script>
 </body>
-
 </html>
